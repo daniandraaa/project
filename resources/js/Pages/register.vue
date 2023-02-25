@@ -1,10 +1,11 @@
 <template>
-    <v-app>
+    <v-app style="background-color: background: rgb(2,45,69);
+    background: linear-gradient(90deg, rgba(2,45,69,1) 0%, rgba(244,244,244,1) 50%, rgba(2,45,69,1) 100%);">
         <v-main>
-            <div class="d-flex justify-center">
-                <v-card elevation="2" width="400" height="670" class="mt-7">
+            <div class="d-flex justify-center mt-15 ">
+                <v-card elevation="2" width="400" height="600" class="mt-7 rounded-xl">
                     <div class="text-center">
-                        <h2 class="text-center">Register</h2>
+                        <h2 class="text-center mt-5" style="font-family: fantasy;">Register</h2>
                     </div>
                     <v-card-text>
                         <v-text-field label="Nama Lengkap" v-model="form.nama" outline :error-messages="errors.nama"></v-text-field>
@@ -13,9 +14,9 @@
                         <v-text-field label="Username" v-model="form.username" outline :error-messages="errors.username"></v-text-field>
                         <v-text-field label="Password" v-model="form.password" outline :error-messages="errors.password"></v-text-field>
                         <!-- <v-select v-model="form.level" :items="['admin', 'petugas', 'masyarakat']" label="Level" variant="outlined" :error-messages="errors.level"></v-select> -->
-                        <v-btn block color="primary" @click="register">register</v-btn>
+                        <v-btn block class="bg-blue-lighten-4" @click="register">register</v-btn>
                         <div class="mt-5">
-                            <v-btn elevation="2" small x-small @click="login">login</v-btn>
+                            <v-btn class="bg-red-lighten-2" elevation="2" small x-small @click="login">login</v-btn>
                         </div>
                     </v-card-text>
                 </v-card>
